@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- section1 -->
+    <div class="header-flex">
+            <div class="search-flex">
+                <input type="text" id="searchBox" placeholder="Search by Name">
+                <div class="img-bg">
+                    <img src="./img/searchicon.png">
+                </div>
+            </div>
+            <div>
+                <select>
+                    <option>All Category</option>
+                </select>
+            </div>
+            <div>
+                <select>
+                    <option>All Blogs</option>
+                </select>
+            </div>
+    </div>
+    <!-- section2 -->
+    <div style="margin-top: 25px;">
+        <table style="width:80%; margin: 0 auto;">
+            <tr class="row1">
+              <th style="text-align: left;"><input type="checkbox" id="check">
+              Blog</th>
+              <th>Category</th>
+              <th>Actions</th>
+            </tr>
+            <tr style="background-color: white;">
+                <td class="text-data1">
+                        <input type="checkbox" id="blog-row">
+                    <div class="text-flex form" >
+                        <input type="text" disabled  id="text1" class="input1" value="Enter Title Of the Blog">
+                        <input type="text" disabled id="text2" class="input1" value="Meta Description of the blog">
+                            <div class="profile-imgs">   
+                                <img src="./img/Ellipse 28 (1).svg" class="img-1">
+                                <img src="./img/Ellipse 28.svg"class="img-1">
+                                <img src="./img/Ellipse 29.svg"class="img-1">
+                                <img src="./img/Ellipse 30.svg"class="img-1">
+                                <img src="./img/Ellipse 31.svg"class="img-1">
+                            </div>
+                            <div>
+                                <div class="show-div">
+                                        <button class="show-btn" onclick="clickButton()">See Analytics<img src="./img/Vector.svg" style="width: 12px;height: 60px;" class="arrow-img"></button>
+                                    
+                                    <div class="hide-div" id="seek-div">
+                                        <div class="hide-content">
+                                            <p>23 Views</p>
+                                            <p>24 Comments</p>
+                                            <p>Share</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </td>
+                <td style="text-align: center;">Category</td>
+                    <td style="display: flex;flex-direction: row;gap: 40px;justify-content: center;position: relative;top: -77px; align-items: center;">
+                        <a class="edit-input" onclick="editor()">
+                            <img src="./img/editicon.png" width="20px;"></a>
+                        
+                                <div class="trash-span" onclick="toggleMenu()">
+                                    <span class="trash-dot"></span>
+                                    <span class="trash-dot"></span>
+                                    <span class="trash-dot"></span>
+                                </div>
+                    </td>
+            </tr>    
+          </table>
+          <!-- filter -->
+            
+                <div class="filter-flex" id="hide">
+                    <div class="filter-dropdown">
+                        <div style="color: #4b6cfb;">Filter</div>
+                        <ul class="filter-div">
+                            <li><a>All Blogs</a></li>
+                            <li><a>Drafts</a></li>
+                            <li><a>Published</a></li>
+                            <li onclick="trashPop()"><a>Trash</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+    </div>
+    
+        <div id="popup-div">
+            <h2>Are you sure you want to move to trash?</h2>
+            <p>You can't undo this section</p>
+            <div>
+                <button>Cancel</button>
+                <button style="background-color: #4b6cfb;color: white;">Yes</button>
+            </div>
+        </div>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+               <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="index.js"></script>
+    
+</body>
+</html>
